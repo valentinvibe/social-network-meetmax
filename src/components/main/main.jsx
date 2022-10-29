@@ -7,12 +7,17 @@ import Messages from "../messages/messages";
 const Main = () => {
   return (
     <div className={styles.wrapper}>
-      <Route exact path="/profile">
-        <Profile />
-      </Route>
-      <Route exact path="/messages">
-        <Messages />
-      </Route>
+      <Switch>
+        <Route exact={true} path="/profile">
+          <Profile />
+        </Route>
+        <Route exact={true} path="/messages">
+          <Messages />
+        </Route>
+        <Route exact={true} path="/">
+          <Profile />
+        </Route>
+      </Switch>
     </div>
   );
 };
