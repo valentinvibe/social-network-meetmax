@@ -5,31 +5,30 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className={styles.wrapper}>
-      <p>navigation bar</p>
-      <ul>
-        <li>
-          <NavLink to="/feed" activeClassName={styles.linkActive}>Feed</NavLink>
+      <ul className={styles.navList}>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/feed" activeClassName={styles.linkActive}>Feed</NavLink>
         </li>
-        <li>
-          <NavLink to="/community" activeClassName={styles.linkActive}>My community</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/community" activeClassName={styles.linkActive}>My community</NavLink>
         </li>
-        <li>
-          <NavLink to="/messages" activeClassName={styles.linkActive}>Messages</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/messages" activeClassName={styles.linkActive}>Messages</NavLink>
         </li>
-        <li>
-          <NavLink to="/notification" activeClassName={styles.linkActive}>Notification</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/notification" activeClassName={styles.linkActive}>Notification</NavLink>
         </li>
-        <li>
-          <NavLink to="/explore" activeClassName={styles.linkActive}>Explore</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/explore" activeClassName={styles.linkActive}>Explore</NavLink>
         </li>
-        <li>
-          <NavLink to="/profile" activeClassName={styles.linkActive}>Profile</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/profile" activeClassName={styles.linkActive}>Profile</NavLink>
         </li>
-        <li>
-          <NavLink to="/settings" activeClassName={styles.linkActive}>Settings</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/settings" activeClassName={styles.linkActive}>Settings</NavLink>
         </li>
-        <li>
-          <NavLink to="/logout" activeClassName={styles.linkActive}>Logout</NavLink>
+        <li className={styles.linkWrapper}>
+          <NavLink className={styles.navLink} to="/logout" activeClassName={styles.linkActive}>Logout</NavLink>
         </li>
       </ul>
     </div>

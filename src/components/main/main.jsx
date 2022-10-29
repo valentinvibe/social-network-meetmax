@@ -11,7 +11,7 @@ const Main = () => {
         <Route exact={true} path="/profile">
           <Profile />
         </Route>
-        <Route exact={true} path="/messages">
+        <Route path="/messages">
           <Messages />
         </Route>
         <Route exact={true} path="/">

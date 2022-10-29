@@ -1,0 +1,12 @@
+.dialog {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.dialogHeader {
+  border-bottom: 1px solid gray;
+  padding: 0;
+  margin: 0;
+}

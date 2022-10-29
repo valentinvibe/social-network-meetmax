@@ -1,6 +1,6 @@
 .header {
     grid-area: header;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 60px;
     display: flex;
     flex-direction: row;

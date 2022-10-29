@@ -1,0 +1,15 @@
+.dialogItem {
+  margin: 10px;
+  width: fit-content;
+}
+
+.dialogItemLink {
+  text-decoration: none;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+}

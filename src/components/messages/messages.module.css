@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: rgba(128, 128, 128, 0.07);
+  height: 100%;
+  border-radius: 30px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  column-gap: 50px;
+}
+
+.dialogs {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  min-width: fit-content;
+}
+
+.dialogsList {
+  list-style-type: none;
+  padding-left: 10px;
+}
