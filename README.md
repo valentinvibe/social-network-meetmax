@@ -68,3 +68,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+[Ссылка на проект Figma](https://www.figma.com/file/l34p1yg4aPIxej7Lz5WHJI/Black-Friday-Meetmax-Social-Media-Networks-Web-App-Design-(Community)-(Community)?node-id=2%3A184)

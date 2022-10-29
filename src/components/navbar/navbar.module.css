@@ -1,0 +1,8 @@
+.wrapper {
+    grid-area: navbar;
+    border: 1px solid blue;
+}
+
+.linkActive {
+    background-color: green;
+}
