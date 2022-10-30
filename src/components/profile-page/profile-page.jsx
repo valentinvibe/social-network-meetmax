@@ -1,17 +1,19 @@
 import styles from './profile-page.module.css';
-import Image from '../../images/userBack.jpg';
 import ava from '../../images/avatar.jpg';
 
 const Profile = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.header}>
-                <img className={styles.headerImage} src={Image} alt="background"/>
+                <div className={styles.headerImage}>
+              
+                </div>
+                
                 <div className={styles.about}>
                     <div className={styles.avatar}>
                         <img className={styles.profileAvatar} src={ava} alt='avatar'/>
-                        <p>Name Surname</p>
-                        <p>Frontend Developer</p>
+                        <p className={styles.paragraph}>Name Surname</p>
+                        <p className={styles.paragraph}>Frontend Developer</p>
                     </div>
                     <div className={styles.edit}>
                         <img className={styles.ico} src="" alt="" />

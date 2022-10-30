@@ -1,25 +1,30 @@
+.wrapper {
+  /* box-sizing: border-box; */
+}
+
 .header {
+  
 }
 
 .headerImage {
   height: 300px;
   width: 100%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   border-radius: 20px 20px 10px 10px;
+  background-image: url('../../images/userBack.jpg');
 }
 
 .about {
   position: relative;
-  bottom: 130px;
+  bottom: 150px;
   padding: 30px;
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid green; */
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 0 rgb(0, 0, 0), 0 0 0 0 rgb(0, 0, 0),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
 
 .profileAvatar {
@@ -31,4 +36,9 @@
 
 .edit {
   align-self: flex-end;
+}
+
+.paragraph {
+  margin: 0;
+  padding: 0;
 }

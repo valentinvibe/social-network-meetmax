@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import styles from "./messages.module.css";
 import DialogListItem from './components/dialog-list-item/dialog-list-item'
 import Dialog from "./components/dialog/dialog";
+import uuid from 'react-uuid';
 
 const Messages = () => {
 
@@ -24,7 +25,7 @@ const Messages = () => {
         </div>
         <ul className={styles.dialogsList}>
           {userList.map(user => 
-            <DialogListItem username={`${user.name}`} id={`${user.id}`}/>
+            <DialogListItem username={`${user.name}`} key={uuid()} id={`${user.id}`}/>
           )}
         </ul>
       </div>
