@@ -3,6 +3,7 @@ import ava from "../../images/avatar.jpg";
 import eye from "../../images/icons/eye-visible.svg";
 import upload from "../../images/icons/upload.svg";
 import Intro from "./components/intro/intro";
+import NewPost from "../new-post/new-post";
 
 import { Button } from "react-bootstrap";
 
@@ -13,13 +14,9 @@ const Profile = () => {
         <div className={styles.headerImage}>
           <img className={styles.profileAvatar} src={ava} alt="avatar" />
           <Button className={styles.changeBackground} variant="light">
-          <img className={styles.uploadIco} src={upload} alt="upload" />
-            Edit Cover Photo
-            </Button>
-          {/* <button type="button" className={styles.changeBackground}>
             <img className={styles.uploadIco} src={upload} alt="upload" />
             Edit Cover Photo
-          </button> */}
+          </Button>
         </div>
 
         <div className={styles.about}>
@@ -34,22 +31,19 @@ const Profile = () => {
           <div className={styles.edit}>
             <img className={styles.ico} src={eye} alt="eye" />
             <Button variant="secondary">Edit basic info</Button>
-            {/* <button type="button" className={styles.editBtn}>
-              Edit basic info
-            </button> */}
           </div>
         </div>
       </div>
 
       <div className={styles.content}>
         <div className={styles.sidebar}>
-            <Intro/>
+          <Intro />
         </div>
         <div className={styles.mainContent}>
-
+          <NewPost/>
         </div>
         <div className={styles.rightSideBar}>
-
+          <Intro />
         </div>
       </div>
     </div>

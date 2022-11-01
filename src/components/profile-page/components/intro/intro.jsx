@@ -46,11 +46,7 @@ const Intro = () => {
         <li className={styles.listItem}>58,975 Followers</li>
         <li className={styles.listItem}>2,564 Following</li>
       </ul>
-      {/* <Button variant="secondary">Edit Details</Button> */}
       <Button className={styles.editBtn} variant="light">Edit Details</Button>
-      {/* <button className={styles.editBtn} type="button">
-        Edit Details
-      </button> */}
     </div>
   );
 };

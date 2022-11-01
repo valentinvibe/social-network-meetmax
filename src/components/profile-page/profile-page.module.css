@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: 2.1fr 7fr 2fr;
   height: calc(100vh - 540px);
-
+  column-gap: 30px;
 }
 
 .changeBackground {

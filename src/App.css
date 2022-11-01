@@ -25,3 +25,8 @@
 *::-webkit-scrollbar-thumb:hover {
   background: #8282da;
 }
+
+.primaryBtn {
+  padding-left: 25px;
+  padding-right: 25px;
+}
