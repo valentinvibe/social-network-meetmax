@@ -4,16 +4,22 @@ import eye from "../../images/icons/eye-visible.svg";
 import upload from "../../images/icons/upload.svg";
 import Intro from "./components/intro/intro";
 
+import { Button } from "react-bootstrap";
+
 const Profile = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <div className={styles.headerImage}>
           <img className={styles.profileAvatar} src={ava} alt="avatar" />
-          <button type="button" className={styles.changeBackground}>
+          <Button className={styles.changeBackground} variant="light">
+          <img className={styles.uploadIco} src={upload} alt="upload" />
+            Edit Cover Photo
+            </Button>
+          {/* <button type="button" className={styles.changeBackground}>
             <img className={styles.uploadIco} src={upload} alt="upload" />
             Edit Cover Photo
-          </button>
+          </button> */}
         </div>
 
         <div className={styles.about}>
@@ -27,9 +33,10 @@ const Profile = () => {
           </div>
           <div className={styles.edit}>
             <img className={styles.ico} src={eye} alt="eye" />
-            <button type="button" className={styles.editBtn}>
+            <Button variant="secondary">Edit basic info</Button>
+            {/* <button type="button" className={styles.editBtn}>
               Edit basic info
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
