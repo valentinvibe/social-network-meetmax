@@ -5,15 +5,8 @@ import DialogListItem from './components/dialog-list-item/dialog-list-item'
 import Dialog from "./components/dialog/dialog";
 import uuid from 'react-uuid';
 
-const Messages = () => {
+const Messages = (props) => {
 
-  const userList = [
-    {id:1, name: 'Oleg'},
-    {id:2, name: 'Vasya'},
-    {id:3, name: 'Petya'},
-    {id:4, name: 'Sasha'},
-    {id:5, name: 'Egor'}
-  ]
   return (
     <div className={styles.wrapper}>
       <div className={styles.dialogs}>
@@ -24,7 +17,7 @@ const Messages = () => {
           </button>
         </div>
         <ul className={styles.dialogsList}>
-          {userList.map(user => 
+          {props.userList.map(user => 
             <DialogListItem username={`${user.name}`} key={uuid()} id={`${user.id}`}/>
           )}
         </ul>

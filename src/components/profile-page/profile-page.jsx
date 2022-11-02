@@ -6,6 +6,7 @@ import Intro from "./components/intro/intro";
 import NewPost from "../new-post/new-post";
 
 import { Button } from "react-bootstrap";
+import SinglePost from "../single-post/single-post";
 
 const Profile = () => {
   return (
@@ -41,6 +42,9 @@ const Profile = () => {
         </div>
         <div className={styles.mainContent}>
           <NewPost/>
+          <div className={styles.posts}>
+            <SinglePost/>
+          </div>
         </div>
         <div className={styles.rightSideBar}>
           <Intro />

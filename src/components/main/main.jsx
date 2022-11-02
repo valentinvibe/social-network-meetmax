@@ -4,7 +4,7 @@ import styles from "./main.module.css";
 import { Switch, Route } from "react-router-dom";
 import Messages from "../messages/messages";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <div className={styles.wrapper}>
       <Switch>
@@ -12,7 +12,7 @@ const Main = () => {
           <Profile />
         </Route>
         <Route path="/messages">
-          <Messages />
+          <Messages userList={props.userList}/>
         </Route>
         <Route exact={true} path="/">
           <Profile />

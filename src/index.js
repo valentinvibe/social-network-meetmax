@@ -5,10 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
+const userList = [
+  {id:1, name: 'Oleg'},
+  {id:2, name: 'Vasya'},
+  {id:3, name: 'Petya'},
+  {id:4, name: 'Sasha'},
+  {id:5, name: 'Egor'}
+]
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <App />
+    <App userList={userList} />
   </BrowserRouter>
 );
 
