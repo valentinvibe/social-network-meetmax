@@ -12,7 +12,7 @@ const Main = (props) => {
           <Profile />
         </Route>
         <Route path="/messages">
-          <Messages userList={props.userList}/>
+          <Messages userList={props.userList} messagesArray={props.messagesArray}/>
         </Route>
         <Route exact={true} path="/">
           <Profile />

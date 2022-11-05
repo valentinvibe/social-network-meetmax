@@ -1,15 +1,73 @@
 .dialogItem {
-  margin: 10px;
-  width: fit-content;
+  min-width: 250px;
+  min-height: 40px;
 }
 
 .dialogItemLink {
   text-decoration: none;
 }
 
-.active {
-  background-color: blue;
-  color: white;
+
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 10px;
+  background: transparent;
+}
+
+.wrapper:hover {
+  background-color: rgba(211, 211, 211, .4);
   border-radius: 10px;
-  padding: 5px;
+}
+
+.active > .wrapper {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.detailsDialog {
+  display: flex;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.paragraph {
+  margin: 0;
+  padding: 0;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.lastMessage {
+  font-size: small;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.timeMessage {
+  font-size: x-small;
+}
+
+.countNotify {
+  font-size: x-small;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
