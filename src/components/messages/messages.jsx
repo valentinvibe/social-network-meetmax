@@ -23,7 +23,7 @@ const Messages = (props) => {
         </ul>
       </div>
       <Route path='/messages/:id'>
-        <Dialog messagesArray={props.messagesArray}/>
+        <Dialog messagesArray={props.messagesArray} user={props.userList}/>
       </Route>
     </div>
   );

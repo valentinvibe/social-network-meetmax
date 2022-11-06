@@ -85,7 +85,7 @@ const SinglePost = () => {
       </div>
 
       <Form className={styles.formComment}>
-        <img src={avatar} className={styles.commentAvatar}/>
+        <img src={avatar} className={styles.commentAvatar} alt="avatar"/>
         <Form.Control className={styles.input} placeholder="Write a comment..." />
         <button type="submit" className={styles.addComment}>
           <img src={send} alt="post" className={styles.postImg}/>
