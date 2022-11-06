@@ -5,7 +5,7 @@ import DialogListItem from './components/dialog-list-item/dialog-list-item'
 import Dialog from "./components/dialog/dialog";
 import uuid from 'react-uuid';
 
-const Messages = (props) => {
+const Messages = ({userList, messagesArray}) => {
 
   return (
     <div className={styles.wrapper}>
@@ -17,13 +17,13 @@ const Messages = (props) => {
           </button>
         </div>
         <ul className={styles.dialogsList}>
-          {props.userList.map(user => 
-            <DialogListItem username={`${user.name}`} key={uuid()} id={`${user.id}`}/>
+          {userList.map(user => 
+            <DialogListItem username={`${user.name}`} key={uuid()} id={`${user.id}`} messagesArray={messagesArray}/>
           )}
         </ul>
       </div>
       <Route path='/messages/:id'>
-        <Dialog messagesArray={props.messagesArray} user={props.userList}/>
+        <Dialog messagesArray={messagesArray} user={userList}/>
       </Route>
     </div>
   );

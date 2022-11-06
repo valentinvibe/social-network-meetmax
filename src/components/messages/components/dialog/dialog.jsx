@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import uuid from "react-uuid";
 import Message from "../message/message";
 import styles from "./dialog.module.css";
-
+import Form from 'react-bootstrap/Form';
+import send from '../../../../images/icons/send.svg';
 import avatar from "../../../../images/avatar.jpg";
 
 const Dialog = ({messagesArray, user}) => {
   const {id} = useParams();
   const chat = messagesArray[id-1];
-  console.log(chat);
   
   return (
     <div className={styles.dialog}>
@@ -26,9 +26,9 @@ const Dialog = ({messagesArray, user}) => {
         </div>
 
         <div className={styles.dialogActionds}>
-          <button type="button" className={`${styles.actionsBtn} ${styles.call}`}>Call</button>
-          <button type="button" className={`${styles.actionsBtn} ${styles.videocall}`}>Video call</button>
-          <button type="button" className={`${styles.actionsBtn} ${styles.info}`}>Info</button>
+          <button type="button" className={`${styles.actionsBtn} ${styles.call}`}></button>
+          <button type="button" className={`${styles.actionsBtn} ${styles.videocall}`}></button>
+          <button type="button" className={`${styles.actionsBtn} ${styles.info}`}></button>
         </div>
         
       </div>
@@ -36,6 +36,13 @@ const Dialog = ({messagesArray, user}) => {
       <div className={styles.messagesList}>
         { chat ? chat.messages.map((message) => <Message key={uuid()} message={message}/>) : null}
       </div>
+
+      <Form className={styles.formComment}>
+        <Form.Control className={styles.input} placeholder="Type something here..." />
+        <button type="submit" className={styles.addComment}>
+          <img src={send} alt="post" className={styles.postImg}/>
+        </button>
+      </Form>
     </div>
   );
 };

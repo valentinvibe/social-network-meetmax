@@ -6,10 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 const userList = [
-  {id:1, name: 'Oleg Nariman'},
-  {id:2, name: 'Vasya Suleman'},
+  {id:1, name: 'Oleg Tinkof'},
+  {id:2, name: 'Vasya Vakulenko'},
   {id:3, name: 'Petya Ahtung'},
-  {id:4, name: 'Sasha Veter'},
+  {id:4, name: 'Sasha Smirnof'},
   {id:5, name: 'Egor Petrucho'}
 ]
 
@@ -33,7 +33,7 @@ const messagesArray = [
     {isOwner:true, text: 'А вон, видишь, что-то из тех бутылей выпил.', timeStamp: '21:17'},
     {isOwner:false, text: 'Ну что, Мансур, как дела?', timeStamp: '21:14'},
     {isOwner:true, text: 'Фашисты прорвали оборону.', timeStamp: '21:24'},
-    {isOwner:false, text: 'А мы с тобой спим?!', timeStamp: '21:47'}
+    {isOwner:false, text: 'Так а что мы с тобой сидим?!', timeStamp: '21:47'}
   ]},
   {id:4, messages: [
     {isOwner:false, text: 'Куда их?', timeStamp: '21:17'},

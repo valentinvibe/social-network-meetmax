@@ -3,22 +3,35 @@ import styles from "./dialog-list-item.module.css";
 import { NavLink } from "react-router-dom";
 import avatar from "../../../../images/avatar.jpg";
 
-const DialogListItem = ({username, id}) => {
+const DialogListItem = ({ username, id, messagesArray }) => {
   return (
     <li className={styles.dialogItem}>
-      <NavLink className={styles.dialogItemLink} to={`/messages/${id}`} activeClassName={styles.active}>
+      <NavLink
+        className={styles.dialogItemLink}
+        to={`/messages/${id}`}
+        activeClassName={styles.active}
+      >
         <div className={styles.wrapper}>
           <div className={styles.detailsDialog}>
-            <img src={avatar} alt={`${username}`} className={styles.avatar}/>
+            <img src={avatar} alt={`${username}`} className={styles.avatar} />
             <div>
-              <p className={`${styles.paragraph} ${styles.username}`}>{`${username}`}</p>
-              <p className={`${styles.paragraph} ${styles.lastMessage}`}>lorem sfjdb sdjfb sdfj bsdfsdf ksd fsdf sdf dfsd sdf sdf sdf sdf sdf sdf sdf  </p>
+              <p
+                className={`${styles.paragraph} ${styles.username}`}
+              >{`${username}`}</p>
+              <p className={`${styles.paragraph} ${styles.lastMessage}`}>
+                {`${messagesArray[id - 1].messages[
+                  messagesArray[id - 1].messages.length - 1].text}`}
+              </p>
+            </div>
           </div>
-          </div>
-          
+
           <div className={styles.info}>
-          <p className={`${styles.paragraph} ${styles.timeMessage}`}>11:26 am</p>
-          <span className={styles.countNotify}>15</span>
+            <p className={`${styles.paragraph} ${styles.timeMessage}`}>{`${
+              messagesArray[id - 1].messages[
+                messagesArray[id - 1].messages.length - 1
+              ].timeStamp
+            }`}</p>
+            <span className={styles.countNotify}>15</span>
           </div>
         </div>
       </NavLink>
@@ -26,4 +39,4 @@ const DialogListItem = ({username, id}) => {
   );
 };
 
-export default DialogListItem
+export default DialogListItem;
