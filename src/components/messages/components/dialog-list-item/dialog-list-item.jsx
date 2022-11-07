@@ -4,6 +4,12 @@ import { NavLink } from "react-router-dom";
 import avatar from "../../../../images/avatar.jpg";
 
 const DialogListItem = ({ username, id, messagesArray }) => {
+
+  const timeStamp = messagesArray[id - 1].messages[
+    messagesArray[id - 1].messages.length - 1
+  ].timeStamp;
+
+  console.log(timeStamp)
   return (
     <li className={styles.dialogItem}>
       <NavLink

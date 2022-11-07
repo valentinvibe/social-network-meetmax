@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import { useParams } from "react-router-dom";
 import uuid from "react-uuid";
 import Message from "../message/message";
@@ -6,10 +6,24 @@ import styles from "./dialog.module.css";
 import Form from 'react-bootstrap/Form';
 import send from '../../../../images/icons/send.svg';
 import avatar from "../../../../images/avatar.jpg";
+import { useEffect } from "react";
 
 const Dialog = ({messagesArray, user}) => {
   const {id} = useParams();
   const chat = messagesArray[id-1];
+
+  const inputRef = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newMessage = {
+      isOwner: true,
+      text: inputRef.current.value,
+      timeStamp: new Date()
+    };
+    chat.messages.push(newMessage);
+    inputRef.current.value = '';
+  }
   
   return (
     <div className={styles.dialog}>
@@ -38,8 +52,8 @@ const Dialog = ({messagesArray, user}) => {
       </div>
 
       <Form className={styles.formComment}>
-        <Form.Control className={styles.input} placeholder="Type something here..." />
-        <button type="submit" className={styles.addComment}>
+        <Form.Control ref={inputRef} className={styles.input} placeholder="Type something here..." />
+        <button type="submit"  onClick={handleSubmit} className={styles.addComment}>
           <img src={send} alt="post" className={styles.postImg}/>
         </button>
       </Form>
