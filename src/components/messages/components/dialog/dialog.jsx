@@ -16,14 +16,20 @@ const Dialog = ({messagesArray, user}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newMessage = {
-      isOwner: true,
-      text: inputRef.current.value,
-      timeStamp: new Date()
-    };
-    chat.messages.push(newMessage);
-    inputRef.current.value = '';
+    if (inputRef.current.value !== '') {
+      const newMessage = {
+        isOwner: true,
+        text: inputRef.current.value,
+        timeStamp: new Date()
+      };
+      chat.messages.push(newMessage);
+      inputRef.current.value = '';
+    } else {}
   }
+
+  useEffect(()=> {
+
+  }, [chat])
   
   return (
     <div className={styles.dialog}>
