@@ -8,8 +8,12 @@ import send from '../../../../images/icons/send.svg';
 import avatar from "../../../../images/avatar.jpg";
 import { useEffect } from "react";
 
-const Dialog = ({messagesArray, user}) => {
+import { useSelector } from 'react-redux'
+
+const Dialog = () => {
+  const user = useSelector((store) => store.users.users)
   const {id} = useParams();
+  const messagesArray = useSelector((store) => store.messages.messagesArray);
   const chat = messagesArray[id-1];
 
   const inputRef = useRef();
