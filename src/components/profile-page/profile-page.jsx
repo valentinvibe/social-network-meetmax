@@ -1,5 +1,5 @@
 import styles from "./profile-page.module.css";
-import ava from "../../images/avatar.jpg";
+import avatar from "../../images/avatar.jpg";
 import eye from "../../images/icons/eye-visible.svg";
 import upload from "../../images/icons/upload.svg";
 import Intro from "./components/intro/intro";
@@ -13,7 +13,7 @@ const Profile = () => {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <div className={styles.headerImage}>
-          <img className={styles.profileAvatar} src={ava} alt="avatar" />
+          <img className={styles.profileAvatar} src={avatar} alt="avatar" />
           <Button className={styles.changeBackground} variant="light">
             <img className={styles.uploadIco} src={upload} alt="upload" />
             Edit Cover Photo

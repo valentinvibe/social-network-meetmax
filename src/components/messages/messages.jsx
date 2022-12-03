@@ -5,7 +5,10 @@ import DialogListItem from './components/dialog-list-item/dialog-list-item'
 import Dialog from "./components/dialog/dialog";
 import uuid from 'react-uuid';
 
-const Messages = ({userList, messagesArray}) => {
+import { useSelector } from 'react-redux';
+
+const Messages = () => {
+  const userList = useSelector((store) => store.users.users)
 
   return (
     <div className={styles.wrapper}>
@@ -18,12 +21,12 @@ const Messages = ({userList, messagesArray}) => {
         </div>
         <ul className={styles.dialogsList}>
           {userList.map(user => 
-            <DialogListItem username={`${user.name}`} key={uuid()} id={`${user.id}`} messagesArray={messagesArray}/>
+            <DialogListItem username={`${user.name}`} key={uuid()} id={`${user.id}`}/>
           )}
         </ul>
       </div>
       <Route path='/messages/:id'>
-        <Dialog messagesArray={messagesArray} user={userList}/>
+        <Dialog />
       </Route>
     </div>
   );

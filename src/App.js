@@ -8,7 +8,7 @@ function App(props) {
     <div className="app-wrapper">
       <Header />
       <Navbar />
-      <Main userList={props.userList} messagesArray={props.messagesArray}/>
+      <Main />
     </div>
   );
 }

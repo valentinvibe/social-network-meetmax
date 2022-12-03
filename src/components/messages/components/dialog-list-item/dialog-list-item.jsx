@@ -3,13 +3,11 @@ import styles from "./dialog-list-item.module.css";
 import { NavLink } from "react-router-dom";
 import avatar from "../../../../images/avatar.jpg";
 
-const DialogListItem = ({ username, id, messagesArray }) => {
+import { useSelector } from 'react-redux';
 
-  // const timeStamp = messagesArray[id - 1].messages[
-  //   messagesArray[id - 1].messages.length - 1
-  // ].timeStamp;
-
-  
+const DialogListItem = ({ username, id }) => {
+  const messagesArray = useSelector((store) => store.messages.messagesArray)
+ 
   return (
     <li className={styles.dialogItem}>
       <NavLink
