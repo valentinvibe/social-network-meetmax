@@ -8,6 +8,8 @@ import NewPost from "../new-post/new-post";
 import { Button } from "react-bootstrap";
 import SinglePost from "../single-post/single-post";
 
+import Recomended from "./components/recomended/recomended";
+
 const Profile = () => {
   return (
     <div className={styles.wrapper}>
@@ -47,7 +49,8 @@ const Profile = () => {
           </div>
         </div>
         <div className={styles.rightSideBar}>
-          <Intro />
+          {/* <Intro /> */}
+          <Recomended/>
         </div>
       </div>
     </div>
