@@ -11,7 +11,11 @@ const Header = () => {
         <NavLink className={styles.navlink} to="/profile">
           <div className={styles.logo}>
             <img className={styles.image} src={logo} alt="meetmax logo" />
-            <span className={styles.title}>Meetmax</span>
+            {/* <span className={styles.title}>Meetmax</span> */}
+            <div className={styles.titleContainer}>
+              <span className={`${styles.title} ${styles.leftSpan}`}>Meet</span>
+              <span className={`${styles.title} ${styles.rightSpan}`}>max</span>
+            </div>
           </div>
         </NavLink>
         <div className={styles.search}>
