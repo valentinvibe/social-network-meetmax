@@ -8,10 +8,13 @@ import send from '../../../../images/icons/send.svg';
 import avatar from "../../../../images/avatar.jpg";
 import { useEffect } from "react";
 
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+
+import { SEND_MESSAGE } from "../../../../services/actions/messages";
 
 const Dialog = () => {
   const user = useSelector((store) => store.users.users)
+  const dispatch = useDispatch();
   const {id} = useParams();
   const messagesArray = useSelector((store) => store.messages.messagesArray);
   const chat = messagesArray[id-1];
@@ -26,9 +29,16 @@ const Dialog = () => {
         text: inputRef.current.value,
         timeStamp: new Date()
       };
-      chat.messages.push(newMessage);
       inputRef.current.value = '';
-    } else {}
+
+      dispatch({
+        type: SEND_MESSAGE,
+        payload: newMessage
+      })
+    } else {
+      return
+    }
+    
   }
 
   useEffect(()=> {
