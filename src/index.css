@@ -12,9 +12,9 @@ a {
   color: rgb(78,93,120);
 }
 
-a:active {
+/* a:active {
   color: rgb(78,93,120);
-}
+} */
 
 a:hover {
   color: rgb(78,93,120);

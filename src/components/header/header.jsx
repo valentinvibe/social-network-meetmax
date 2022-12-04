@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./header.module.css";
-import logo from "../../images/logo.svg";
 import avatar from "../../images/avatar.jpg";
 import { NavLink } from "react-router-dom";
 
@@ -10,8 +9,6 @@ const Header = () => {
       <div className={styles.wrapper}>
         <NavLink className={styles.navlink} to="/profile">
           <div className={styles.logo}>
-            <img className={styles.image} src={logo} alt="meetmax logo" />
-            {/* <span className={styles.title}>Meetmax</span> */}
             <div className={styles.titleContainer}>
               <span className={`${styles.title} ${styles.leftSpan}`}>Meet</span>
               <span className={`${styles.title} ${styles.rightSpan}`}>max</span>
